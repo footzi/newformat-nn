@@ -50,6 +50,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    
 }
 header a {
     position: absolute;
@@ -70,8 +72,7 @@ header a {
     width: 58%;
 }
 .header-img-3 {
-    position: absolute;
-    width: 24%;
+    width: 27%;
     left: 45%;
 }
 header h1 {
