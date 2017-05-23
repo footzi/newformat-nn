@@ -1,0 +1,238 @@
+
+@font-face {
+	font-family: 'MVideo';
+	src: url('../fonts/MVideo/MVideo.eot');
+	src: local('☺'), url('../fonts/MVideo/MVideo.woff') format('woff'), url('../fonts/MVideo/MVideo.ttf') format('truetype'), url('../fonts/MVideo/MVideo.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Evolventa';
+	src: url('../fonts/MVideofonts/Evolventa.eot');
+	src: local('☺'), url('../fonts/Evolventa/Evolventa.woff') format('woff'), url('../fonts/Evolventa/Evolventa.ttf') format('truetype'), url('../fonts/Evolventa/Evolventa.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DINpro';
+	src: url('../fonts/DINpro/DINpro.eot');
+	src: local('☺'), url('../fonts/DINpro/DINpro.woff') format('woff'), url('../fonts/DINpro/DINpro.ttf') format('truetype'), url('../fonts/DINpro/DINpro.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Coco Gothic Ultralight-trial';
+	src: url('../fonts/Coco Gothic Ultralight-trial/Coco Gothic Ultralight-trial.eot');
+	src: local('☺'), url('../fonts/Coco Gothic Ultralight-trial/Coco Gothic Ultralight-trial.woff') format('woff'), url('../fonts/Coco Gothic Ultralight-trial/Coco Gothic Ultralight-trial.ttf') format('truetype'), url('../fonts/Coco Gothic Ultralight-trial/Coco Gothic Ultralight-trial.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*@font-face {
+    font-family: OpenSans-Regular;
+    src:url(../fonts/OpenSans-Regular.ttf)
+}*/
+@font-face {
+    font-family: DINPro-light;
+    src:url(../fonts/dinpro-light.otf)
+}
+
+
+body {
+    font-family: MVideo;
+}
+
+/*****all title*****/
+.title {
+    font-weight:bolder;
+    font-size:2.5vw; 
+}
+
+/*****bands*****/
+hr {
+    border:none;
+    background-color: black;
+    height: 0.1vw;
+}
+.hr-left {
+    float: left;
+}
+.hr-right {
+    float: right;
+}
+
+/*****header*****/
+header {
+    background-color: black;
+    height: 11.5vw;
+    color:white;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a {
+    position: absolute;
+    top:0;
+}
+.header-img-1 {
+    position: absolute;
+    width: 30%;
+    top:0.5vw;
+    left: 1vw;
+    opacity: 0.21;
+}
+.header-img-2 {
+    position: absolute;
+    top:1vw;
+    right: 0;
+    opacity: 0.3;
+    width: 53%;
+}
+.header-img-3 {
+    position: relative;
+    width: 18%;
+    left: 12%;
+}
+header h1 {
+    font-family:Coco Gothic Ultralight-trial;
+    font-size: 5vw;
+}
+.header-info {
+    font-size: 1vw;
+}
+.header-info h2 {
+    margin-bottom: 1.5vw;
+}
+.header-info h2:last-child {
+    margin-bottom: 0;
+}
+
+/*****navigation****/
+nav {
+    font-family: Evolventa;
+    padding: 0.5vw 5vw 0.5vw 5vw;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+nav a {
+    font-weight: bolder;
+    color:black;
+    text-decoration: none;
+    font-size: 1vw;
+    position: relative;
+    transition: 0.5s all;
+    left:0;
+}
+
+nav a:hover {
+    left:2vw;
+}
+.nav-menu-dropdown {
+    opacity: 0;
+    margin-left: -2vw;
+    padding: 1vw 6vw 1vw 2vw;
+    position: absolute;
+    display: block;
+    background-color: white;
+    transition: 0.5s opacity;
+    z-index: 2;
+}
+.nav-menu>a:hover {
+    left:0;
+}
+.nav-menu:hover .nav-menu-dropdown {
+    opacity: 1;
+}
+.nav-menu-dropdown li {
+    margin-top: 0.5vw;
+    display: block;
+}
+
+/*****banner*****/
+.banner {
+    background: url(../images/banner.jpg) no-repeat;
+    background-size:cover;
+    height: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-content {
+    text-align: center;
+}
+.banner-content img {
+    width: 30vw;
+}
+.banner-content img:last-child {
+    transform: rotate(180deg);
+}
+.banner-content-text {
+    color:white;
+    font-size: 2.5vw;
+    margin: 3vw 0;
+    line-height: 3vw;
+}
+
+/*****about*****/
+.about {
+    text-align: center;
+    background: url(../images/about.jpg) no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    padding: 6vw 5vw;
+}
+.about hr {
+    width:35%;
+}
+.about-content {
+    text-align: center;
+    margin-top: 7vw;
+    font-size: 1.5vw;
+    line-height: 3vw;
+    text-indent: 2vw;
+}
+
+/*****decor*****/
+.decor {
+    color:white;
+    background-color: black;
+    text-align: center;
+    padding: 6vw 5vw;
+}
+.decor hr {
+    width: 30%;
+    background-color:white;
+}
+.decor-items {
+    margin-top: 5vw;
+    padding: 0 15vw;
+}
+.decor-items-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    font-family: DINpro-light;
+}
+.decor-items-title-name {
+    width: 13vw;
+    height: 13vw;
+    border-radius: 50%;
+    border:0.2vw solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vw;
+}
+.decor-items-title-info {
+    text-align: justify;
+    text-indent: 2vw;
+    width: 71%;
+    font-size: 1.5vw;
+    line-height: 2.5vw
+}
