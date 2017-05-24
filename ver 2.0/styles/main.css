@@ -181,9 +181,9 @@ nav a:hover {
 /*****about*****/
 .about {
     text-align: center;
-    /*background: url(../images/about.jpg) no-repeat;
+    background: url(../images/about.jpg) no-repeat;
     background-size:cover;
-    background-attachment: fixed;*/
+    background-attachment: fixed;
     padding: 6vw 5vw;
     min-height: 20vw;
     background: transparent;
@@ -193,7 +193,7 @@ nav a:hover {
 }
 .about-content {
     text-align: center;
-    margin-top: 7vw;
+    margin-top: 5vw;
     font-size: 1.5vw;
     line-height: 3vw;
     text-indent: 2vw;
@@ -236,7 +236,7 @@ nav a:hover {
     text-indent: 2vw;
     width: 71%;
     font-size: 1.5vw;
-    line-height: 2.5vw
+    line-height: 2.5vw;
 }
 .decor-items-images {
     margin-top: 5vw;
@@ -244,11 +244,41 @@ nav a:hover {
 .decor-items-images img { 
     width: 100%;
 }
+.decor-items-slider .bx-wrapper {
+    margin-top:5vw; 
+    background-color: black;
+    margin-bottom: 0;
+}
+.decor-items-slider li {
+    text-align: justify;
+    /*position: relative;
+    display: flex;
+    justify-content: space-between;*/
+}
+.decor-items-slider img {
+    margin-right: 2vw;
+    display: inline-block;
+    width: 17vw;
+} 
+.decor-items-slider img:last-child{ 
+    margin-right: 0;
+}
+.decor-items-slider .bx-pager {
+    position: relative !important;
+}
+.decor-items-slider .bx-pager-item a {
+    background:#666 !important;
+}
+.decor-items-slider .bx-pager-item a.active {
+    background:white !important;
+}
 
+/*****reviews*****/
 .reviews {
     background-color: white;
     text-align: center;
     padding: 6vw 5vw;
+    font-family: DINpro;
 }
 .reviews hr {
     width: 40%;
@@ -258,18 +288,38 @@ nav a:hover {
     margin-top: 5vw;
 }
 .reviews-carousel-title {
-    font-size: 1.5vw;
+    font-size: 2vw;
+    padding-top: 0.2vw;
+    font-weight: bolder;
+}
+.reviews-carousel-title span {
+    font-size: 4vw;
+}
+.reviews-carousel-content {
+    margin-top: 4vw;
 }
 .reviews-carousel-content-symbol-l {
     text-align: left;
+    font-size: 4vw;
+    font-weight: bolder;
 }
 .reviews-carousel-content-symbol-r {
     text-align:right;
+    font-size: 4vw;
+    font-weight: bolder;
+}
+.reviews-carousel-content-text {
+    font-size: 1.5vw;
+    font-size: bolder;
+    line-height: 2.5vw;
 }
 .review-link {
     margin-top: 2vw;
     font-size: 2vw;
     text-decoration: underline;
+}
+.review-link a {
+    color:black;
 }
 
 /*****feedback******/
@@ -277,7 +327,10 @@ nav a:hover {
     color:white;
     background-color: black;
     text-align: center;
-    padding: 6vw 0;   
+    padding: 6vw 5vw;
+    background: url(../images/feedback.jpg) no-repeat;
+    background-size:cover;
+    background-attachment: fixed; 
 }
 .feedback hr {
     width: 30%;
@@ -290,18 +343,24 @@ nav a:hover {
 .feedback-form input, .feedback-form textarea {
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
+    font-size: 1.2vw;
     color:white;
-    border:0.2vw solid white;
+    border:0.1vw solid white;
     background: transparent;
+    font-family:Coco Gothic Ultralight-trial;
+    padding-left: 0.5vw; 
 }
 .feedback-form input {
-    height: 4vw;
+    height: 3vw;
 }
 .feedback-form textarea {
+    padding-top: 0.5vw;
     height: 8vw;
 }
 .feedback-form button {
+    margin-top: 3vw;
+    padding: 0;
     color:white;
     font-size: 2vw;
     background: transparent;

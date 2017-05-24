@@ -6,9 +6,10 @@
         Новый формат. Уникальные изделия из стекла. Авторская ручная работа. Не формат. Эксклюзивные предметы интерьера. Купить эксклюзивный, оригинальный подарок в Нижнем Новогороде.
     </title>
 	<link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/main.css">
+    
         <link rel="stylesheet" href="styles/media.css">
     <link rel="stylesheet" href="styles/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body> 
 	<header>
@@ -103,7 +104,19 @@
                         Серия "Cвет"
                     </div>
                 </div>
-                <div class="decor-items-images">
+                <div class="decor-items-slider">
+                    <ul class="bxslider">
+                        <li>
+                            <img src="images/bootle1.jpg" alt="">
+                            <img src="images/bootle2.jpg" alt="">
+                            <img src="images/bootle3.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/bootle4.jpg" alt="">
+                            <img src="images/bootle5.jpg" alt="">
+                            <img src="images/bootle1.jpg" alt="">
+                        </li>
+                    </ul>
                 </div>
             </div>
 		</section>
@@ -115,33 +128,33 @@
                 <ul class="bxslider">
                     <li>
                         <p class="reviews-carousel-title">
-                            Ольга Михайлова
+                            <span>☺</span> Ольга Михайлова
                         </p>
                         <div class="reviews-carousel-content">
                             <div class="reviews-carousel-content-symbol-l">
-                                @
+                                "
                             </div>
                             <div class="reviews-carousel-content-text">
-                                Во время изготовления светильника попались мне под руку обычные вилки... Теперь жена размышляет, как от меня спасти кухонную утварь:)
+                                Алексей, спасибо, огромнейшее, за такие очаровательные, очень функциональные и интересные стопочки. Еще и упакованы в мешочки, все очень продумано. Безумно понравилось. Как идея для подарка вообще замечательна. Будем заглядывать к Вам в магазинчик. Желаем Вам вдохновения и творческих побед.
                             </div>
                             <div class="reviews-carousel-content-symbol-r">
-                                @
+                                "
                             </div>
                         </div>
                     </li>
                     <li>
                         <p class="reviews-carousel-title">
-                            Екатерина Николаева
+                            <span>☺</span> Екатерина Николаева
                         </p>
                         <div class="reviews-carousel-content">
                             <div class="reviews-carousel-content-symbol-l">
-                                @
+                                "
                             </div>
                             <div class="reviews-carousel-content-text">
                                 Во время изготовления светильника попались мне под руку обычные вилки... Теперь жена размышляет, как от меня спасти кухонную утварь:)
                             </div>
                             <div class="reviews-carousel-content-symbol-r">
-                                @
+                                "
                             </div>
                         </div>
                     </li>
@@ -157,10 +170,10 @@
             </div>
             <div class="feedback-form">
                 <form id="myform" method="post" >
-                    <input type="text" name="name" placeholder="Ваше имя" required >
-                    <input type="number" name="phone" placeholder="Ваш телефон" required >
-                    <input type="email" name="email" placeholder="Ваш e-mail" required >
-                    <textarea type="text" name="text" placeholder="Ваш запрос" required ></textarea>
+                    <input type="text" name="name" placeholder="Ваше имя..." required >
+                    <input type="number" name="phone" placeholder="Ваш телефон..." required >
+                    <input type="email" name="email" placeholder="Ваш e-mail..." required >
+                    <textarea type="text" name="text" placeholder="Ваш запрос..." required ></textarea>
                     <button type="submit">Отправить</button>
                 </form>    
             </div>
@@ -236,10 +249,11 @@
 	<script src="js/parallax.min.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
 	<script>
-		$('.review').parallax({imageSrc: 'images/about.jpg'});
+		// $('.review').parallax({imageSrc: 'images/about.jpg'});
         $('.bxslider').bxSlider({
           mode: 'fade',
-          captions: true
+          captions: true,
+          auto: true
         });
 	</script>
 </body>
