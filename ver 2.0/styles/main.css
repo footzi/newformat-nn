@@ -325,12 +325,15 @@ nav a:hover {
 /*****feedback******/
 .feedback {
     color:white;
-    background-color: black;
+    height: 300px;
+    /*background-color: black;*/
+    background-attachment: transparent;
     text-align: center;
-    padding: 6vw 5vw;
+    padding: 6vw 5vw;/*
     background: url(../images/feedback.jpg) no-repeat;
     background-size:cover;
-    background-attachment: fixed; 
+    background-attachment: fixed;*/
+    outline: 2px solid black;
 }
 .feedback hr {
     width: 30%;
@@ -358,6 +361,10 @@ nav a:hover {
     padding-top: 0.5vw;
     height: 8vw;
 }
+::-webkit-input-placeholder {color:white;}
+::-moz-placeholder          {color:white;}
+:-moz-placeholder           {color:white;}
+:-ms-input-placeholder      {color:white;}
 .feedback-form button {
     margin-top: 3vw;
     padding: 0;
@@ -443,4 +450,15 @@ footer {
 .footer-contacts-icons img {
     width: 100%;
     margin-bottom: 3.3vw;
+}
+
+.test {
+    height: 100vh;
+    background:transparent;
+    overflow: hidden;
+    position: relative;
+}
+.test img {
+    position: absolute;
+    width: 100%;
 }
