@@ -245,16 +245,47 @@
             </div>
         </div>
     </footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/parallax.min.js"></script>
+    <div class="test">
+        <!-- <img src="images/about.jpg" alt=""> -->   
+    </div>
+    <div class="container" id="container">
+        <div class="scene" id="scene">
+            <div class="layer" data-depth="1.00">
+                <img src="images/about.jpg" alt="">      
+            </div>
+        </div>
+        <br>
+        <div class="scene" id="scene">
+            <div class="layer" data-depth="1.00">
+                <img src="images/.jpg" alt="">      
+            </div>
+        </div>
+    </div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- <script src="js/parallax.min.js"></script> -->
+    <script src="js/parallax.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
 	<script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+
+
 		// $('.review').parallax({imageSrc: 'images/about.jpg'});
+        // $('.test').parallax({imageSrc: 'images/01.jpg'});
         $('.bxslider').bxSlider({
           mode: 'fade',
           captions: true,
           auto: true
         });
+
+
+        // $(window).scroll(function() {
+        //     var st = $(this).scrollTop();
+        //     $(".test img").css({
+        //         "transform":"translate(0%, " + st /100 + "%"
+        //     })
+        // })
+
 	</script>
 </body>
 </html>
