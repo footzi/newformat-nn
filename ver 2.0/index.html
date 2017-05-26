@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body> 
+    <!--<div class="test" data-stellar-offset-parent="true">
+        <img data-stellar-ratio="5" src="images/about.jpg" alt="">
+    </div>-->
+    
 	<header>
         <h1>
             NEwFORMAT
@@ -50,6 +54,10 @@
         </ul>
     </nav>
 	<main>
+
+       
+        
+
 		<section class="banner">
 			<div class="banner-content">
 				<img src="images/banner-border.png" alt="">
@@ -58,13 +66,27 @@
 			</div>
 		</section>
 		<section class="about" >
-			<div class="title">
+            <div class="title">
                 <hr class="hr-left">ОБО МНЕ<hr class="hr-right">
             </div>
 			<div class="about-content">
 				Меня зовут Алексей и я рад приветствовать Вас на моей страничке. Здесь Вы увидите самые креативные и необычные вещи сделанные из казалось бы, обычного стекла. Каждое изделие имеет свой неповторимый авторский дизайн, и является уникальным.Меня зовут Алексей и я рад приветствовать Вас на моей страничке. Здесь Вы увидите самые креативные и необычные вещи сделанные из казалось бы, обычного стекла. Каждое изделие имеет свой неповторимый авторский дизайн, и является уникальным. Меня зовут Алексей и я рад приветствовать Вас на моей страничке. Здесь Вы увидите самые креативные и необычные вещи сделанные из казалось бы, обычного стекла. Каждое изделие имеет свой неповторимый авторский дизайн, и является уникальным.
 			</div>
 		</section>
+        <!--<section class="about" >
+            <img src="images/about.jpg" alt="">
+            <div class="about-wrapper">
+                <div class="title">
+                    <hr class="hr-left">ОБО МНЕ<hr class="hr-right">
+                </div>
+                <div class="about-content">
+                    Меня зовут Алексей и я рад приветствовать Вас на моей страничке. Здесь Вы увидите самые креативные и необычные вещи сделанные из казалось бы, обычного стекла. Каждое изделие имеет свой неповторимый авторский дизайн, и является уникальным.Меня зовут Алексей и я рад приветствовать Вас на моей страничке. Здесь Вы увидите самые креативные и необычные вещи сделанные из казалось бы, обычного стекла. Каждое изделие имеет свой неповторимый авторский дизайн, и является уникальным. Меня зовут Алексей и я рад приветствовать Вас на моей страничке. Здесь Вы увидите самые креативные и необычные вещи сделанные из казалось бы, обычного стекла. Каждое изделие имеет свой неповторимый авторский дизайн, и является уникальным.
+                </div>
+            </div>
+		</section>-->
+         
+        </div>
+        
 		<section class="decor">
 			<div class="title">
                 <hr class="hr-left">АВТОРСКИЙ ДЕКОР<hr class="hr-right">
@@ -91,10 +113,12 @@
                         Серия "Cвет"
                     </div>
                 </div>
+                
                 <div class="decor-items-images">
                     <img src="images/2.jpg" alt="">
                 </div>
 			</div>
+            
             <div class="decor-items">
                 <div class="decor-items-title">
                     <div class="decor-items-title-info">
@@ -119,7 +143,7 @@
                     </ul>
                 </div>
             </div>
-		</section>
+		</section>>
         <section class="reviews">
             <div class="title">
                 <hr class="hr-left">ОТЗЫВЫ<hr class="hr-right">
@@ -164,7 +188,7 @@
                 </div>
             </div>
         </section>
-        <section class="feedback">
+        <section class="feedback" data-stellar-background-ratio="0.5">
             <div class="title">
                 <hr class="hr-left">СВЯЗАТЬСЯ СО МНОЙ<hr class="hr-right">
             </div>
@@ -179,6 +203,7 @@
             </div>
         </section>
 	</main>
+    
     <footer>
         <div class="footer-about">
             <div class="footer-about-nav">
@@ -236,7 +261,6 @@
                         footzi@mail.ru
                     </div>
                 </div>
-
             </div>
             <div class="footer-contacts-icons">
                 <a href="https://www.facebook.com/profile.php?id=100005247404068&fref=ts"><img src="images/footer-icon.png" alt=""></a>
@@ -245,47 +269,24 @@
             </div>
         </div>
     </footer>
-    <div class="test">
-        <!-- <img src="images/about.jpg" alt=""> -->   
-    </div>
-    <div class="container" id="container">
-        <div class="scene" id="scene">
-            <div class="layer" data-depth="1.00">
-                <img src="images/about.jpg" alt="">      
-            </div>
-        </div>
-        <br>
-        <div class="scene" id="scene">
-            <div class="layer" data-depth="1.00">
-                <img src="images/.jpg" alt="">      
-            </div>
-        </div>
-    </div>
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<!-- <script src="js/parallax.min.js"></script> -->
-    <script src="js/parallax.js"></script>
+	<script src="js/jquery-1.1.3.1.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.stellar.js"></script>
 	<script>
-        var scene = document.getElementById('scene');
-        var parallax = new Parallax(scene);
-
-
-		// $('.review').parallax({imageSrc: 'images/about.jpg'});
-        // $('.test').parallax({imageSrc: 'images/01.jpg'});
         $('.bxslider').bxSlider({
           mode: 'fade',
           captions: true,
           auto: true
         });
 
+        $(window).stellar();
 
-        // $(window).scroll(function() {
-        //     var st = $(this).scrollTop();
-        //     $(".test img").css({
-        //         "transform":"translate(0%, " + st /100 + "%"
-        //     })
-        // })
-
+            $(window).scroll(function() {
+            var st = $(this).scrollTop();
+            $(".test img").css({
+                "transform":"translate(0%, -" + st /20 + "%"
+            })
+        })
 	</script>
 </body>
 </html>
@@ -293,8 +294,4 @@
 
 
 
-
                                                                         
-  <!--Во время изготовления светильника попались мне под руку обычные вилки... Теперь жена размышляет, как от меня спасти кухонную утварь:)  Я изготавливаю светильники и ночники из любых стеклянных бутылок. Все изделия авторские и изготавливаются в единственном экземпляре!
-                                                                                  
-    Часы из самых обычных стеклянных бутылок! Все интерьерные «штучки» изготавливаются по собственной, уникальной технологии: «расплющивание» бутылок происходит при t=800С в специальной печи с последующим декорированем. -->
