@@ -180,10 +180,18 @@ nav a:hover {
 
 /*****about*****/
 .about {
-    background-image: url(../images/about.jpg);
-    background-size:cover; 
+    overflow: hidden;
+    position: relative;
+
+}
+.about img {
+    position: absolute;
+    width: 100%;
+}
+.about-wrapper {
     text-align: center;
     padding: 6vw 5vw;
+    position: relative;
 }
 .about hr {
     width:35%;
@@ -322,7 +330,7 @@ nav a:hover {
 }
 
 /*****feedback******/
-.feedback {
+/*.feedback {
     background-image: url(../images/feedback.jpg);
     background-size:cover;
     background-color: black;
@@ -330,6 +338,21 @@ nav a:hover {
     text-align: center;
     padding: 6vw 5vw;
     outline: 2px solid black;
+}*/
+.feedback {
+    color:white;
+    overflow: hidden;
+    position: relative;    
+}
+
+.feedback img {
+    position: absolute;
+    width: 100%;
+}
+.feedback-wrapper {
+    text-align: center;
+    padding: 6vw 5vw;
+    position: relative;
 }
 .feedback hr {
     width: 30%;
@@ -447,31 +470,3 @@ footer {
     width: 100%;
     margin-bottom: 3.3vw;
 }
-
-.test {
-    height: 80vh;
-    background:transparent;
-    overflow: hidden;
-    position: relative;
-}
-.test img {
-    position: absolute;
-    width: 100%;
-}
-.test-wrapper {
-    position: relative;
-}
-
-/*.about {
-    height: 80vh;
-    background:transparent;
-    overflow: hidden;
-    position: relative;
-}
-.about img {
-    position: absolute;
-    width: 100%;
-}
-.about-wrapper {
-    position: relative;
-}*/
