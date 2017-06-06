@@ -49,7 +49,9 @@ body {
     font-weight:bolder;
     font-size:2.5vw; 
 }
-
+.title-name {
+    display: inline-block;
+}
 /*****bands*****/
 hr {
     border:none;
@@ -114,6 +116,7 @@ header h1 {
 nav {
     font-family: Evolventa;
     padding: 0.5vw 5vw 0.5vw 5vw;
+    background-color: white;
 }
 nav ul {
     display: flex;
@@ -134,17 +137,18 @@ nav a:hover {
 }
 .nav-menu-dropdown {
     opacity: 0;
+    margin-top: 0.5vw;
     margin-left: -2vw;
-    padding: 1vw 6vw 1vw 2vw;
+    padding: 0.5vw 6vw 0.5vw 2vw;
     position: absolute;
     display: block;
     background-color: white;
-    transition: 0.5s opacity;
+    transition: 0.5s all;
     z-index: 2;
 }
-.nav-menu>a:hover {
+/*.nav-menu>a:hover {
     left:0;
-}
+}*/
 .nav-menu:hover .nav-menu-dropdown {
     opacity: 1;
 }
@@ -152,15 +156,33 @@ nav a:hover {
     margin-top: 0.5vw;
     display: block;
 }
-
+.nav-menu-dropdown-fixed {
+    background-color: rgba(255,255,255,0.9);
+}
+.nav-fixed {
+    position: fixed;
+    box-sizing: border-box;
+    top:0;
+    z-index: 9999;
+    width:100%;
+    transition: 0.5s all;
+    background-color: rgba(255,255,255,0.9)
+}
 /*****banner*****/
 .banner {
-    background: url(../images/banner.jpg) no-repeat;
-    background-size:cover;
-    height: 40vw;
+    /*background: url(../images/banner.jpg) no-repeat;
+    background-size:cover;*/
+    background-color:black; 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 1.5vw;
+}
+.banner-img {
+    width:30%;
+}
+.banner-img img {
+    width:100%;
 }
 .banner-content {
     text-align: center;
@@ -180,19 +202,15 @@ nav a:hover {
 
 /*****about*****/
 .about {
-    overflow: hidden;
-    position: relative;
-
-}
-.about img {
-    position: absolute;
-    width: 100%;
-}
-.about-wrapper {
     text-align: center;
     padding: 6vw 5vw;
-    position: relative;
 }
+.about {
+    background: url('../images/about.jpg') no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+}
+
 .about hr {
     width:35%;
 }
@@ -252,7 +270,8 @@ nav a:hover {
     width: 100%;
 }
 .decor-items-slider .bx-wrapper {
-    margin-top:5vw; 
+    margin-top:5vw;
+
     background-color: black;
     margin-bottom: 0;
 }
@@ -273,30 +292,46 @@ nav a:hover {
 .decor-items-slider .bx-pager {
     position: relative !important;
 }
-.decor-items-slider .bx-pager-item a {
+/*.decor-items-slider .bx-pager-item a {
+    width: 1vw !important;
+    height: 1vw !important;
     background:#666 !important;
 }
 .decor-items-slider .bx-pager-item a.active {
     background:white !important;
+}*/
+.decor-items-slider .bx-prev,
+.decor-items-slider .bx-next {
+    display:none;
 }
-
 /*****reviews*****/
 .reviews {
     background-color: white;
     text-align: center;
     padding: 6vw 5vw;
-    font-family: DINpro;
 }
 .reviews hr {
     width: 40%;
 }
-.reviews-carousel {
+.reviews-carousel  {
     padding: 0 15vw;
     margin-top: 5vw;
 }
+.reviews-carousel  .bx-wrapper {
+    margin-top:5vw;
+}
+.reviews-carousel .bx-prev {
+    left:-10%;
+}
+.reviews-carousel .bx-next {
+    right:-10%;
+}
+.reviews-carousel .bx-pager-item:nth-child(5) {
+    display: none;
+}
 .reviews-carousel-title {
     font-size: 2vw;
-    padding-top: 0.2vw;
+    padding-top: 1vw;
     font-weight: bolder;
 }
 .reviews-carousel-title span {
@@ -330,29 +365,13 @@ nav a:hover {
 }
 
 /*****feedback******/
-/*.feedback {
-    background-image: url(../images/feedback.jpg);
-    background-size:cover;
-    background-color: black;
-    color:white;
-    text-align: center;
-    padding: 6vw 5vw;
-    outline: 2px solid black;
-}*/
 .feedback {
-    color:white;
-    overflow: hidden;
-    position: relative;    
-}
-
-.feedback img {
-    position: absolute;
-    width: 100%;
-}
-.feedback-wrapper {
-    text-align: center;
-    padding: 6vw 5vw;
     position: relative;
+    color:white; 
+    text-align: center;
+    padding: 6vw 5vw; 
+    background: url('../images/feedback.jpg') no-repeat;
+    background-size: 100%;
 }
 .feedback hr {
     width: 30%;
@@ -370,8 +389,8 @@ nav a:hover {
     color:white;
     border:0.1vw solid white;
     background: transparent;
-    font-family:Coco Gothic Ultralight-trial;
     padding-left: 0.5vw; 
+    font-family: MVideo;
 }
 .feedback-form input {
     height: 3vw;
@@ -384,6 +403,17 @@ nav a:hover {
 ::-moz-placeholder          {color:white;}
 :-moz-placeholder           {color:white;}
 :-ms-input-placeholder      {color:white;}
+
+:focus::-webkit-input-placeholder {color:#999;}
+:focus::-moz-placeholder          {color:#999;}
+:focus:-moz-placeholder           {color:#999;}
+:focus:-ms-input-placeholder      {color:#999;}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .feedback-form button {
     margin-top: 3vw;
     padding: 0;
