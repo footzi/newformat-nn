@@ -170,12 +170,19 @@ nav a:hover {
 }
 /*****banner*****/
 .banner {
-    background: url(../images/banner.jpg) no-repeat;
-    background-size:cover;
-    height: 40vw;
+    /*background: url(../images/banner.jpg) no-repeat;
+    background-size:cover;*/
+    background-color:black; 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 1.5vw;
+}
+.banner-img {
+    width:30%;
+}
+.banner-img img {
+    width:100%;
 }
 .banner-content {
     text-align: center;
@@ -216,6 +223,7 @@ nav a:hover {
 .about {
     background: url('../images/about.jpg') no-repeat;
     background-size: 100%; 
+    background-size: cover; 
     background-attachment: fixed;
 }
 
@@ -298,13 +306,12 @@ nav a:hover {
     margin-right: 0;
 }
 .decor-items-slider .bx-pager {
+    top:2vw;
     position: relative !important;
 }
-.decor-items-slider .bx-pager-item a {
-    background:#666 !important;
-}
-.decor-items-slider .bx-pager-item a.active {
-    background:white !important;
+.decor-items-slider .bx-prev,
+.decor-items-slider .bx-next {
+    display:none;
 }
 .decor-items-slider .bx-prev,
 .decor-items-slider .bx-next {
@@ -361,8 +368,15 @@ nav a:hover {
     font-size: bolder;
     line-height: 2.5vw;
 }
+.reviews-carousel .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.reviews-carousel .bx-wrapper .bx-pager.bx-default-pager a.active,
+.reviews-carousel .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: black;
+}
+
 .review-link {
-    margin-top: 2vw;
+    position: relative;
+    top: 3vw;
     font-size: 2vw;
     text-decoration: underline;
 }
@@ -507,20 +521,3 @@ footer {
     margin-bottom: 3.3vw;
 }
 
-.parallax {
-    position: relative;
-    overflow: hidden;
-   
-}
-.bg {
-    position: absolute;
-    top:0;
-    left:0;
-    right: 0;
-}
-.parallax-wrapper {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 6vw 5vw; 
-}

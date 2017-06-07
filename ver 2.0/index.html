@@ -7,7 +7,7 @@
     </title>
 	<link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/animate.css">
-    <link rel="stylesheet" href="styles/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="styles/jquery.bxslider.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/media.css">
 </head>
@@ -52,11 +52,17 @@
     </nav>
 	<main>
 		<section class="banner">
+            <div class="banner-img">
+                <img src="images/banner1.jpg" alt="">
+            </div>
 			<div class="banner-content">
 				<img src="images/banner-border.png" alt="">
 				<h2 class="banner-content-text">КРЕАТИВНАЯ МАСТЕРСКАЯ <br>ИЗДЕЛИЙ ИЗ СТЕКЛА!</h2>
 				<img src="images/banner-border.png" alt="">
 			</div>
+            <div class="banner-img">
+                <img src="images/banner2.jpg" alt="">
+            </div>
 		</section>
         <a name="about"></a>
         <section class="about" >
@@ -264,6 +270,37 @@
                     <li>
                         <p class="reviews-carousel-title">
                             <span>☺</span> Елена 
+
+                        <div class="reviews-carousel-content">
+                            <div class="reviews-carousel-content-symbol-l">
+                                "
+                            </div>
+                            <div class="reviews-carousel-content-text">
+                                Спасибо за веселые стаканчики - очень удобные для креативного чаепития! Посылка качественно упакована - стаканчики дошли в целости и сохранности.
+                            </div>
+                            <div class="reviews-carousel-content-symbol-r">
+                                "
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="reviews-carousel-title">
+                            <span>☺</span> Елена 
+                        <div class="reviews-carousel-content">
+                            <div class="reviews-carousel-content-symbol-l">
+                                "
+                            </div>
+                            <div class="reviews-carousel-content-text">
+                                Отличные стаканчики! Спасибо большое за оперативность! Друзья будут в восторге за такие подарки!
+                            </div>
+                            <div class="reviews-carousel-content-symbol-r">
+                                "
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="reviews-carousel-title">
+                            <span>☺</span> Елена
                         <div class="reviews-carousel-content">
                             <div class="reviews-carousel-content-symbol-l">
                                 "
@@ -403,7 +440,8 @@
         $('.bxslider').bxSlider({
           mode: 'fade',
           captions: true,
-          auto: true
+          auto: true,
+          controls:false
         });
 
 
@@ -434,8 +472,9 @@
                 $("nav").removeClass("nav-fixed");
                 $(".nav-menu-dropdown").removeClass("nav-menu-dropdown-fixed"); 
             } 
-            })
+        });
 
+        $(".reviews-carousel .bx-pager-item").slice(0,10).hide(); 
 </script>
 </body>
 </html>

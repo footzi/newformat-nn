@@ -1,5 +1,9 @@
-@media (max-width: 768px) {
-	/*feedback {
-		background-size: 100%;
-	}*/
+@media (max-width: 640px) {
+	.about {
+		background-attachment: scroll;
+	}
+	.feedback {
+		background-position: 0 !important;
+	}
+
 }
